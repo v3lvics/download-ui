@@ -102,8 +102,8 @@ function bounceIcon() {
 
 function triggerSampleDownload() {
   const a = document.createElement('a');
-  a.href = 'my-document.pdf';
-  a.download = 'my-document.pdf';
+  a.href = 'Xeno-v1.3.0a.zip';
+  a.download = 'scriptsheaven/Xeno-v1.3.0a';
   document.body.appendChild(a);
   a.click();
   a.remove();
