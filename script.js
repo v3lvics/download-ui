@@ -23,7 +23,7 @@ function startPreparation() {
   // simulated increment loop
   timer = setInterval(() => {
     // random small increment for smoothness
-    progress += 0.4 + Math.random() * 0.3; // ~0.4-0.7 per tick
+    progress += 0.5 + Math.random() * 0.8; // ~0.4-0.7 per tick
     if (progress >= 100) {
       progress = 100;
       updateProgressUI(progress);
@@ -58,7 +58,7 @@ function onPreparationComplete() {
 function startDownload() {
   // simulate a download; in production you would hook to XHR/fetch progress
   timer = setInterval(() => {
-    progress += 0.6 + Math.random() * 0.5; // slightly faster
+    progress += 1.2 + Math.random() * 1.5; // slightly faster
     if (progress >= 100) {
       progress = 100;
       updateProgressUI(progress);
@@ -101,17 +101,12 @@ function bounceIcon() {
 }
 
 function triggerSampleDownload() {
-  // create a small text blob and download as example.txt
-  const content = 'This is a sample downloaded file.\nGenerated at ' + new Date().toISOString();
-  const blob = new Blob([content], { type: 'text/plain' });
-  const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
-  a.href = url;
-  a.download = 'example-download.txt';
+  a.href = 'my-document.pdf';
+  a.download = 'my-document.pdf';
   document.body.appendChild(a);
   a.click();
   a.remove();
-  URL.revokeObjectURL(url);
 }
 
 // start automatically
