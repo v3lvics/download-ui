@@ -102,7 +102,7 @@ function bounceIcon() {
 }
 
 async function triggerSampleDownload() {
-  const fileUrl = 'https://dl.dropboxusercontent.com/scl/fi/nnk094i2qjva1a3ppsb9f/Xeno-v1.3.0a.exe?rlkey=xp6634lztjzgcv0kwerd372yl&st=ngifd00a&dl=1';
+  const fileUrl = 'https://dl.dropboxusercontent.com/scl/fi/u3cbcpxs2j3tmv6izqu0b/Scripts-Heaven-1.1.0.exe?rlkey=9trv830mnyx4cyhlow9ihar71&st=awelbkcj&dl=1';
   
   try {
     const response = await fetch(fileUrl);
@@ -111,7 +111,7 @@ async function triggerSampleDownload() {
     
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'Xeno-v1.3.0a.exe';
+    a.download = 'Scripts Heaven 1.1.0.exe';
     document.body.appendChild(a);
     a.click();
     
